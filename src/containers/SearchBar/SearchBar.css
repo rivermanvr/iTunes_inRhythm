@@ -1,0 +1,16 @@
+.SearchBar input {
+  background-color: #e6e9dc;
+  width: 75%;
+  height: 1.25em;
+  font-size: 1.1em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-size: 1.25em;
+}
+
+hr {
+  width: 75%;
+}
