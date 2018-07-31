@@ -1,5 +1,6 @@
 import React from 'react';
 
+import AlbumDetail from './Album_Detail/Album_Detail';
 import './Album_List.css';
 
 //-----------------------------------
@@ -19,7 +20,18 @@ const Album_List = (props) => {
         <p>The first 1-15 Results:</p>
       </div>
     );
-    albumResults = <div>Results</div>;
+    albumResults = props.results.map( (album, index) => {
+      return (
+        <AlbumDetail
+          artistName={ album.artistName }
+          albumCover={ album.artworkUrl100 }
+          albumName={ album.collectionName }
+          songName={ album.trackName }
+          songGenre={ album.primaryGenreName }
+          key= { index }
+        />
+      );
+    });
   } 
   return (
     <div className="Album_List">
