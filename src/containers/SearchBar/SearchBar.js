@@ -8,6 +8,7 @@ class SearchBar extends Component {
   onInputChange = (ev) => {
     const artist = ev.target.value;
     this.setState({ artist });
+    this.props.onSearchTermChange(artist);
   }
 
   render() {
@@ -19,7 +20,7 @@ class SearchBar extends Component {
           onChange={ this.onInputChange } />
         <hr />
       </div>
-    )
+    );
   }
 }
 
