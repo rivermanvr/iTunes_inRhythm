@@ -3,19 +3,19 @@ import React, { Component } from 'react';
 import './SearchBar.css';
 
 class SearchBar extends Component {
-  state = { author: ''}
+  state = { artist: ''}
 
   onInputChange = (ev) => {
-    const author = ev.target.value;
-    this.setState({ author });
+    const artist = ev.target.value;
+    this.setState({ artist });
   }
 
   render() {
     return (
       <div className="SearchBar">
-        <h6 className="label">Author search:</h6>
+        <h6 className="label">Artist search:</h6>
         <input
-          value={ this.state.author }
+          value={ this.state.artist }
           onChange={ this.onInputChange } />
         <hr />
       </div>
