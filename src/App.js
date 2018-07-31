@@ -19,7 +19,7 @@ class App extends Component {
         console.log('axios call response: ', res.data.results);
         this.setState({ artist, results: res.data.results });
       })
-      .catch(err => console.log('timing errors:', err));
+      .catch(err => console.log('timing errors: ', err));
   }
 
   render() {
@@ -33,7 +33,7 @@ class App extends Component {
           </header>
           <div>
             <SearchBar onSearchTermChange= { selectedArtist } />
-            <ArtistList />
+            <ArtistList artist={ this.state.artist } results={ this.state.results } />
           </div>
         </div>
       </BrowserRouter>
@@ -42,4 +42,3 @@ class App extends Component {
 }
 
 export default App;
-

@@ -3,6 +3,7 @@ import React from 'react';
 import './Artist_List.css';
 
 const Artist_List = (props) => {
+  console.log('in Artist_List: -props-', this.props);
   const artistData = <p className="label" style={{ textAlign: "center" }}>Please enter an Artist name</p>;
   if (this.props) console.log('props from Artist_List: ', this.props);
   return (
