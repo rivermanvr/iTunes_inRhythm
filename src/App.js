@@ -11,7 +11,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <header className="header">
-            <h1 className="title">iTunes Search, List & Play</h1>
+            <h1 className="title">iTunes Artist Search & List</h1>
           </header>
           <div>
             <SearchBar />
