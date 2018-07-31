@@ -16,7 +16,6 @@ class App extends Component {
     // including the album name and album cover inside #albums-container in a grid. 
     axios.get(`https://itunes.apple.com/search?term=${artist}`)
       .then(res => {
-        console.log('axios call response: ', res.data.results);
         this.setState({ artist, results: res.data.results });
       })
       .catch(err => console.log('timing errors: ', err));
@@ -24,7 +23,6 @@ class App extends Component {
 
   render() {
     const selectedArtist = _.debounce(artist => this.selectedArtist(artist), 500);
-    console.log('state: ', this.state.artist);
     return (
       <BrowserRouter>
         <div className="App">
