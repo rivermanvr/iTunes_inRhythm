@@ -4,7 +4,7 @@ import axios from 'axios';
 import _ from 'lodash';
 
 import SearchBar from './containers/SearchBar/SearchBar';
-import ArtistList from './components/Artist_List/Artist_List';
+import AlbumList from './components/Album_List/Album_List';
 import './App.css';
 
 class App extends Component {
@@ -12,8 +12,6 @@ class App extends Component {
   state = { artist: '', albums: [] };
 
   selectedArtist (artist) {
-    // display the list of albums, 
-    // including the album name and album cover inside #albums-container in a grid. 
     axios.get(`https://itunes.apple.com/search?term=${artist}`)
       .then(res => {
         this.setState({ artist, results: res.data.results });
@@ -31,7 +29,7 @@ class App extends Component {
           </header>
           <div>
             <SearchBar onSearchTermChange= { selectedArtist } />
-            <ArtistList artist={ this.state.artist } results={ this.state.results } />
+            <AlbumList results={ this.state.results } />
           </div>
         </div>
       </BrowserRouter>
