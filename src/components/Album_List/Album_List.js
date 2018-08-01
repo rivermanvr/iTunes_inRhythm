@@ -12,21 +12,23 @@ const Album_List = (props) => {
   console.log('in Album_List: -props-', props);
   let albumHeader = <p style={{ textAlign: "center" }}>Please enter an Artist name</p>;
   let albumResults = <div></div>;
-  if (props.results && props.results.length > 0) {
-    albumHeader = <div className="weightTitle">Results:</div>
-    albumResults = props.results.map( (album, index) => {
-      return (
-        <AlbumDetail
-          artistName={ album.artistName }
-          albumCover={ album.artworkUrl100 }
-          albumName={ album.collectionName }
-          songName={ album.trackName }
-          songGenre={ album.primaryGenreName }
-          key= { index }
-        />
-      );
-    });
-  } 
+  if (props.artist !== '') {
+    if (props.results && props.results.length > 0) {
+      albumHeader = <div className="weightTitle">Results:</div>
+      albumResults = props.results.map( (album, index) => {
+        return (
+          <AlbumDetail
+            artistName={ album.artistName }
+            albumCover={ album.artworkUrl100 }
+            albumName={ album.collectionName }
+            songName={ album.trackName }
+            songGenre={ album.primaryGenreName }
+            key= { index }
+          />
+        );
+      });
+    } 
+  }
   return (
     <div className="Album_List">
       { albumHeader }

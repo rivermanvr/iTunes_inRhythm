@@ -12,11 +12,15 @@ class App extends Component {
   state = { artist: '', albums: [] };
 
   selectedArtist (artist) {
-    axios.get(`https://itunes.apple.com/search?term=${artist}`)
+    if (artist !== '') {
+      axios.get(`https://itunes.apple.com/search?term=${artist}`)
       .then(res => {
         this.setState({ artist, results: res.data.results });
       })
       .catch(err => console.log('timing errors: ', err));
+    } else {
+      this.setState({ artist: '', albums: [] });
+    }
   }
 
   render() {
@@ -29,7 +33,7 @@ class App extends Component {
           </header>
           <div>
             <SearchBar onSearchTermChange= { selectedArtist } />
-            <AlbumList results={ this.state.results } />
+            <AlbumList artist={ this.state.artist } results={ this.state.results } />
           </div>
         </div>
       </BrowserRouter>
