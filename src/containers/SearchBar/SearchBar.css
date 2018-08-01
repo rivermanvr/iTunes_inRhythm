@@ -1,8 +1,8 @@
 .SearchBar .label {
   font-size: 1.25em;
 }
-
-@media (max-width: 1024px) {
+/* phones */
+@media (max-width: 425px) {
   .SearchBar hr {
     width: 75%;
     align-content: center;
@@ -20,6 +20,26 @@
   }
 }
 
+/* tablets */
+@media (min-width: 426px) {
+  .SearchBar hr {
+    width: 75%;
+    align-content: center;
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+
+  .SearchBar input {
+    background-color: #e6e9dc;
+    width: 75%;
+    height: 1.3em;
+    font-size: 1.25em;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+/* monitors */
 @media (min-width: 1025px) {
   .SearchBar hr {
     width: 45%;
@@ -38,6 +58,7 @@
   }
 }
 
+/* large monitors */
 @media (min-width: 1700px) {
   .SearchBar hr {
     width: 35%;
