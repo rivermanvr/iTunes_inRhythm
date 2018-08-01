@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './SearchBar.css';
+import '../../App.css';
 
 class SearchBar extends Component {
   state = { artist: ''}

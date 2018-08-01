@@ -1,7 +1,7 @@
 import React from 'react';
 
 import AlbumDetail from './Album_Detail/Album_Detail';
-import './Album_List.css';
+import '../../App.css';
 
 //-----------------------------------
 // display the list of albums, 
@@ -25,12 +25,12 @@ const Album_List = (props) => {
             songGenre={ album.primaryGenreName }
             key= { index }
           />
-        );
+        ); 
       });
     } 
   }
   return (
-    <div className="Album_List">
+    <div className="Album_List gridCSS">
       { albumHeader }
       { albumResults }
     </div>
