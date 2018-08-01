@@ -4,12 +4,11 @@
   padding-right: 2em;
   font-size: 1.25em;
 }
-.Album_List .weightTitle {
-  font-weight: bold;
+.marginTitle {
   margin-bottom: 10px;
 }
 
-.Album_List .weightLabel {
+.weightLabel {
   font-weight: bold;
   margin: 0%;
 }

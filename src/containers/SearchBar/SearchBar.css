@@ -2,7 +2,7 @@
   font-size: 1.25em;
 }
 
-@media (max-width: 1399px) {
+@media (max-width: 1024px) {
   .SearchBar hr {
     width: 75%;
     align-content: center;
@@ -20,7 +20,25 @@
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1025px) {
+  .SearchBar hr {
+    width: 45%;
+    align-content: center;
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+
+  .SearchBar input {
+    background-color: #e6e9dc;
+    width: 45%;
+    height: 1.3em;
+    font-size: 1.25em;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 1700px) {
   .SearchBar hr {
     width: 35%;
     align-content: center;

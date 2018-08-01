@@ -14,7 +14,7 @@ const Album_List = (props) => {
   let albumResults = <div></div>;
   if (props.artist !== '') {
     if (props.results && props.results.length > 0) {
-      albumHeader = <div className="weightTitle">Results:</div>
+      albumHeader = <div className="title marginTitle">Results:</div>
       albumResults = props.results.map( (album, index) => {
         return (
           <AlbumDetail
