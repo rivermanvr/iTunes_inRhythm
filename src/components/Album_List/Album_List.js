@@ -9,8 +9,7 @@ import '../../App.css';
 //-----------------------------------
 
 const Album_List = (props) => {
-  console.log('in Album_List: -props-', props);
-  let albumHeader = <p className="labelAlignCtr" >Please enter an Artist name</p>;
+  let albumHeader = <p className="label ctr" >Please enter an Artist name</p>;
   let albumResults = <div></div>;
   if (props.artist !== '') {
     if (props.results && props.results.length > 0) {
@@ -30,9 +29,9 @@ const Album_List = (props) => {
     } 
   }
   return (
-    <div className="Album_List gridCSS">
+    <div className="Album_List">
       { albumHeader }
-      { albumResults }
+      <div className="gridCSS">{ albumResults }</div>
     </div>
   );
 };

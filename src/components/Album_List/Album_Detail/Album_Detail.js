@@ -13,7 +13,6 @@ const Album_Detail = ({ albumCover, albumName, artistName, songGenre, songName }
       <p><span className="weightLabel">Genre: </span>{ songGenre }</p>
       <p className="weightLabel">Song:</p>
       <p>{ songName }</p>
-      <hr />
     </div>
   );
   return (  

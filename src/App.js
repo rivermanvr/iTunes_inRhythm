@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   render() {
-    const selectedArtist = _.debounce(artist => this.selectedArtist(artist), 500);
+    const selectedArtist = _.debounce(artist => this.selectedArtist(artist), 300);
     return (
       <BrowserRouter>
         <div className="App">

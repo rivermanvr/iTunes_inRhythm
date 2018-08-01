@@ -9,11 +9,6 @@
     padding-right: 2em;
   }
 
-  .labelAlignCtr {
-    text-align: center;
-    font-size: 1.25em;
-  }
-
   .marginTitle {
     margin-bottom: 12px;
   }
@@ -40,6 +35,10 @@
     font-size: 1.25em;
   }
 
+  .ctr {
+    text-align: center;
+  }
+
   .SearchBar hr {
     width: 75%;
     align-content: center;
@@ -59,6 +58,12 @@
   .Album_Detail {
     font-size: 1.25em;
   }
+
+  .gridCSS {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap:    75px;
+  }
 }
 
 /* tablets */
@@ -73,7 +78,11 @@
     font-weight: bold;
   }
   .label {
-    font-size: 1.4em;
+    font-size: 1.6em;
+  }
+
+  .ctr {
+    text-align: center;
   }
 
   .SearchBar hr {
@@ -86,8 +95,8 @@
   .SearchBar input {
     background-color: #e6e9dc;
     width: 65%;
-    height: 1.4em;
-    font-size: 1.4em;
+    height: 1.65em;
+    font-size: 1.6em;
     text-align: center;
     margin-bottom: 15px;
   }
@@ -97,7 +106,10 @@
   }
 
   .gridCSS {
-    color: red;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap:    75px;
+    grid-column-gap: 15px;
   }
 }
 
@@ -113,7 +125,11 @@
   }
 
   .label {
-    font-size: 1.5em;
+    font-size: 1.7em;
+  }
+
+  .ctr {
+    text-align: center;
   }
 
   .SearchBar hr {
@@ -126,8 +142,8 @@
   .SearchBar input {
     background-color: #e6e9dc;
     width: 45%;
-    height: 1.5em;
-    font-size: 1.5em;
+    height: 1.75em;
+    font-size: 1.7em;
     text-align: center;
     margin-bottom: 15px;
   }
@@ -137,37 +153,9 @@
   }
 
   .gridCSS {
-    color: yellowgreen;
-  }
-}
-
-/* large monitors */
-@media (min-width: 1700px) {
-  .label {
-    font-size: 1.55em;
-  }
-
-  .SearchBar hr {
-    width: 35%;
-    align-content: center;
-    margin-top: 5px;
-    margin-bottom: 25px;
-  }
-
-  .SearchBar input {
-    background-color: #e6e9dc;
-    width: 35%;
-    height: 1.6em;
-    font-size: 1.55em;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-  .Album_Detail {
-    font-size: 1.55em;
-  }
-
-  .gridCSS {
-    color: goldenrod;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap:    75px;
+    grid-column-gap: 15px;
   }
 }
