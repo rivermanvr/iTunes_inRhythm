@@ -10,11 +10,11 @@ import './Album_List.css';
 
 const Album_List = (props) => {
   console.log('in Album_List: -props-', props);
-  let albumHeader = <p style={{ textAlign: "center" }}>Please enter an Artist name</p>;
+  let albumHeader = <p className="labelAlignCtr" >Please enter an Artist name</p>;
   let albumResults = <div></div>;
   if (props.artist !== '') {
     if (props.results && props.results.length > 0) {
-      albumHeader = <div className="title marginTitle">Results:</div>
+      albumHeader = <div className="title marginTitle">Results:</div>;
       albumResults = props.results.map( (album, index) => {
         return (
           <AlbumDetail
