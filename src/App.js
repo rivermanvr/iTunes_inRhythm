@@ -12,6 +12,7 @@ class App extends Component {
   state = { artist: '', albums: [] };
 
   selectedArtist (artist) {
+    console.log('this: ', this, ' artist: ', artist)
     if (artist !== '') {
       axios.get(`https://itunes.apple.com/search?term=${artist}`)
       .then(res => {
@@ -24,7 +25,10 @@ class App extends Component {
   }
 
   render() {
-    const selectedArtist = _.debounce(artist => this.selectedArtist(artist), 300);
+    const selectedArtist = _.throttle(artist => this.selectedArtist(artist), 150, {
+      leading: true,
+      trailing: true
+    });
     return (
       <BrowserRouter>
         <div className="App">
