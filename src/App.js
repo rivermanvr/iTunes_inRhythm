@@ -9,10 +9,20 @@ import './App.css';
 
 class App extends Component {
 
-  state = { artist: '', albums: [] };
+  state = { artist: '', results: [] };
+
+  shouldComponentUpdate (nextProps, nextState) {
+    console.log('will.....state: ', this.state);
+    console.log('nextState: ', nextState, '-------');
+    if (nextState.artist !== this.state.artist) {
+      this.setState({ artist: nextState.artist, results: nextState.results })
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   selectedArtist (artist) {
-    console.log('this: ', this, ' artist: ', artist)
     if (artist !== '') {
       axios.get(`https://itunes.apple.com/search?term=${artist}`)
       .then(res => {
@@ -20,7 +30,7 @@ class App extends Component {
       })
       .catch(err => console.log('timing errors: ', err));
     } else {
-      this.setState({ artist: '', albums: [] });
+      this.setState({ artist: '', results: [] });
     }
   }
 
