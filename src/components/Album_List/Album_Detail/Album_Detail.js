@@ -17,7 +17,7 @@ const Album_Detail = ({ albumCover, albumName, artistName, songGenre, songName }
     <div className="Album_Detail">
       { albumData }
     </div>
-  )
-}
+  );
+};
 
 export default Album_Detail;
