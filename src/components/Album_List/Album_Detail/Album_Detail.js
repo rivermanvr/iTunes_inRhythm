@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../../../App.css';
-
 const Album_Detail = ({ albumCover, albumName, artistName, songGenre, songName }) => {
   const albumData = (
     <div>

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import AlbumDetail from './Album_Detail/Album_Detail';
-import '../../App.css';
 
 //-----------------------------------
 // display the list of albums, 
